@@ -10,5 +10,84 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
+/* when click eye icon it will be blur background */
+.blurred {
+    filter: blur(5px); /* Apply a 5px blur */
+    transition: filter 0.4s ease; /* Smooth transition */
+}
+
+.popup{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    background: #50866d;
+    border-radius: 0.375rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    color: #fff;
+    cursor: pointer;
+    /* text-align: center; */
+    text-align:start;
+    padding: 0 1.8rem 1.8rem;
+    visibility: hidden;
+    transition: transform 0.4s ease, top 0.4s ease;
+
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+   
+    
+}
+.profile{
+    transform: translateX(13%);
+    width: 50rem;
+}
+.eye{
+    cursor: pointer;
+}
+.mail {
+    
+    font-size: 1.142rem;
+}
+.age{
+    font-size: 1.142rem;
+}
+.gender{
+    font-size: 1.142rem;
+} 
+.phone{
+    font-size: 1.142rem;
+}
+.bloodGroup{
+    font-size: 1.142rem;
+}
+.closeBtn{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 0;
+    border: none;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+    font-size: 1.125rem;
+    color: #480404;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    font-weight: 600;
+    transition:all 0.2s ease;
+}
+.closeBtn:hover{
+   background: #bee8d6;
+   color: black;
+   transition:all 0.3s ease;
+}
