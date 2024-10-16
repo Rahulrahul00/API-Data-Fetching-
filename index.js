@@ -12,10 +12,9 @@ async function getData() {
                    <td><img src = "${item.image}" width="50"  height="50"</td>
                    <td>${item.age}</td>
                    <td>${item.gender}</td>
-                   <td>${item.email}</td>
-
-
-        </tr>`
+                   <td class="email-column">${item.email}</td>
+                  <td onclick='eyeView(${JSON.stringify(item)})'><i class="fa-solid fa-eye"></i></td>
+                </tr>`
     });
 
    document.getElementById("tBody").innerHTML = tabDetails;
@@ -24,4 +23,12 @@ async function getData() {
     // console.log(data)
     
 }
+
+
+
+
+    function eyeView(item){
+        alert(`User:${item.firstName} ${item.lastName} profile : ${item.image} Age : ${item.age}`)
+    }
+
 

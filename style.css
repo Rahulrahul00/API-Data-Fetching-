@@ -4,3 +4,11 @@
     box-sizing: border-box;
 }
 
+.main-head {
+    background-color: rgb(59, 135, 105);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
