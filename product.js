@@ -15,11 +15,12 @@ async function productData() {
 
 
    let description = items.description;
+   let title = items.title;
   
               products.innerHTML += `
     <div class="product">
              <img src="${items.images[0]}" class="product-img">
-            <h2 class="product-title">${items.title}</h2>
+            <h2 class="product-title">${title.length >10 ? title.substring(0, 10).concat('...') : title}</h2>
             <h4 class="product-category">${items.category}</h4>
             <p class="product-description">${description.length > 80 ? description.substring(0, 80).concat('...more') : description }</p>
             <div class="product-price-container">
