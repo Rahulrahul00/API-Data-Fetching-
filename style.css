@@ -23,13 +23,13 @@
     position: relative;
     width: 25rem;
     height: 25rem;
-    background: #50866d;
+    background: #2c6e49;
     border-radius: 0.375rem;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%)scale(0.1);
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     /* text-align: center; */
     text-align:start;
@@ -37,6 +37,13 @@
     visibility: hidden;
     transition: transform 0.4s ease, top 0.4s ease;
 
+}
+/* Changed Images */
+.popup .profile img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%; 
 }
 
 .open-popup{
@@ -55,19 +62,19 @@
 }
 .mail {
     
-    font-size: 1.142rem;
+    font-size: 1rem;
 }
 .age{
-    font-size: 1.142rem;
+    font-size: 1rem;
 }
 .gender{
-    font-size: 1.142rem;
+    font-size: 1rem;
 } 
 .phone{
-    font-size: 1.142rem;
+    font-size: 1rem;
 }
 .bloodGroup{
-    font-size: 1.142rem;
+    font-size: 1rem;
 }
 .closeBtn{
     position: absolute;
@@ -91,3 +98,4 @@
    color: black;
    transition:all 0.3s ease;
 }
+
