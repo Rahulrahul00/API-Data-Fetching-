@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+  
 }
 
 .main-head {
@@ -44,6 +46,7 @@
     height: 130px;
     object-fit: cover;
     border-radius: 50%; 
+    margin-top: 1rem;
 }
 
 .open-popup{

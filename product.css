@@ -16,34 +16,123 @@ body{
     font-size: 1.6rem;
 }
 
-.container{
+/* .container{
     max-width: 144rem;
     padding:  0 2rem;
     margin: 0 auto;
     
-}
+} */
 
 .products{
    padding: 2rem 0;
    display: grid;
-   grid-template-columns: repeat(auto-fit,minmax(22rem, 1fr));
-   gap: 2rem;
+   grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+   gap: 2.5rem;
+   margin: 4rem 4rem 0 5.5rem;
+   
 
+}
+
+.product{
+    position: relative;
+    background:#f0eeee;
+    border-radius: 0.3rem;
+    /* text-align: start; */
+    padding: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.2);
+    width: 26rem;
+    
+    
 }
 
 .products img{
-    width: 70%;
+    margin: auto;
+    width: 16rem;
+    height: 16rem;
+   
+    
 }
+
+.product .product-title{
+    font-size: 2rem;
+    padding: 1rem 0;
+    
+}
+
+.product-content{
+  padding: 1rem 2rem;
+}
+
+
+.product-title,
+.product-category,
+.product-description,
+.product-price-container{
+    padding: 0.1rem 0 0;
+
+}
+.product-price-container{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #131115;
+}
+.product-description{
+    color: #454445;
+}
+
+
 
 .new-product-heading{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 4rem;
 }
 .new-product-heading h2{
-    font-size: 3rem;
+    font-size: 5rem;
 }
 .new-product-heading p{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    color: #a963fe;
+}
+
+.add-to-cart{
+    background-color: #a963fe;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    color: #ffff;
+    font-weight: 500;
+}
+
+
+/* Resposive  */
+
+@media(max-width : 321px){
+    .product{
+    
+     margin: 0 -1.5rem ;
+     width: 24rem;
+    }
+    .new-product-heading h2{
+        font-size: 3.5rem;
+    }
+}
+
+@media(max-width : 426px){
+    .product{
+    
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+       }
+
 }
