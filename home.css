@@ -21,11 +21,32 @@ ul{
 
 }
 
-/* header{
+ header{
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     width:100%;
+    top:0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+/* js header fixer  */
+
+.header-fix{
+    position: fixed;
+    box-shadow: 2px 2px 40px rgba(0,0,0,0.05);
+    animation: animationnav 0.8s;
+    
+}
+/* navbar animation */
+@keyframes animationnav{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 0%;
+    }
 }
 .header-top-bar{
     border-bottom: 1px solid #f5f5f5;
@@ -33,7 +54,12 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+   
+} 
+
+
+
+
 .navigation{
     display: flex;
     justify-content: space-between;
