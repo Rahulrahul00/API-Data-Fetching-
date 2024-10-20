@@ -209,7 +209,7 @@ ul{
    
 }
 
-/* Make responsive  */
+/* Make responsive for Navbar section  */
 .menu-btn,
 .menu-icon{
     display: none;
@@ -310,4 +310,84 @@ ul{
 
   
 }
+/* Make @426px responsive for home page */
+@media(max-width:426px){
+
+    .main-banner-text h1{
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight:800;
+        
+        
+    }
+    .main-banner-text h4{
+        font-size: 2rem;
+        letter-spacing: 0.02px;
+       
+    
+    }
+    .main-banner-text a{
+        width: 90px;
+        height: 28px;
+        font-size: 0.8rem;
+        margin: 2rem 0;
+
+    }
+
+}
+
+/* Make @376px responsive for home page */
+@media(max-width:376px){
+
+    .main-banner-text h1{
+        font-size: 1.5rem;
+        line-height: 1rem;
+        font-weight:800;
+        
+        
+    }
+    .main-banner-text h4{
+        font-size: 1.5rem;
+        letter-spacing: 0.02px;
+       
+    
+    }
+    .main-banner-text a{
+        width: 80px;
+        height: 25px;
+        font-size: 0.7rem;
+        margin: 2rem 0;
+
+    }
+
+/*  Responsive for logo name*/
+    .navigation a h5 {
+        color: #353232;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+    .navigation span{
+       color: #f7444e;
+       font-size: 1.2rem;
+    }
+
+    .navigation .menu-icon .nav-icon{
+        background-color: #141414cc;
+        display: block;
+        height: 2px;
+        width: 20px;
+        
+        position: relative;
+        transition: background 0.2s ease-out;
+    }
+
+    .right-nav a {
+        width: 30px;
+        height: 30px;
+    }
+    
+
+}
+
+
 
