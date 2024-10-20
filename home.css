@@ -124,10 +124,23 @@ ul{
     text-decoration: none;
     border-radius: 3rem;
     background-color: var(--main-light-color);
+    transition: all 0.5s ease;
 
 }
 .right-nav a i{
     color: #4b4b4b;
+    transition: all 0.3s ease;
+    
+}
+.right-nav a i:hover{
+    color: #ffffff;
+    transition: all 0.3s ease;
+    
+}
+.right-nav a:hover{
+    color: #ffffff;
+    background-color: #fcacb0;
+    transition: all 0.5s ease;
 }
 
 /* main banner image section */
@@ -142,7 +155,11 @@ ul{
     height: 100%;
     display: flex;
     flex-direction: column;
+    
 
+}
+#main-banner{
+    position: relative;
 }
 .main-banner-box{
     width: 100%;
@@ -182,4 +199,115 @@ ul{
     align-items: center;
     margin-top: 30px;
     text-decoration: none;
+    transition: all 0.5s ease;
 }
+
+.main-banner-text a:hover{
+    background-color: #ffffff;
+    color: #f7444e;
+    transition: all 0.5s ease;
+   
+}
+
+/* Make responsive  */
+.menu-btn,
+.menu-icon{
+    display: none;
+}
+
+@media(max-width:1000px){
+    .navigation{
+        justify-content: space-between;
+        height: 65px;
+        padding: 35px 15px;
+        position: relative;
+    }
+    .header-fix .navigation{
+        padding: 35px 15px;
+    }
+    .navigation .menu{
+        position: absolute;
+        top: 100%;
+        display: none;
+        z-index: 100;
+        padding: 0px;
+        margin: 0px;
+        border-bottom: 1px solid #f5f5f5;
+        background-color: #ffffff;
+        width: 100%;
+    }
+    .navigation .menu li{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .navigation .menu li a{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 30px 20px;
+        margin: 0px;
+        border: 1px solid #f5f5f5;
+        height: 50px;
+
+    }
+    .menu-icon{
+        display: block;
+    }
+    .navigation .menu-icon{
+        cursor: pointer;
+        float: right;
+        padding: 5px;
+        user-select: none;
+        z-index: 2;
+        position: relative;
+
+    }
+    .navigation .menu-icon .nav-icon{
+        background-color: #141414cc;
+        display: block;
+        height: 2px;
+        width: 25px;
+        position: relative;
+        transition: background 0.2s ease-out;
+    }
+
+    .navigation .menu-icon .nav-icon::before,
+    .navigation .menu-icon .nav-icon::after{
+        background-color: #414141cc;
+        content: '';
+        position: absolute;
+        display:block;
+        width: 100%;
+        height: 100%;
+        transition: all ease-out 0.2s;
+    }
+    .navigation .menu-icon .nav-icon::before{
+        top:7px
+    }
+    .navigation .menu-icon .nav-icon::after{
+        top:-7px
+    }
+    .navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    .navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .navigation .menu-btn:checked ~ .menu-icon .nav-icon{
+        background-color: transparent;
+    }
+    .navigation .menu-btn:checked~ .menu{
+        display: block;
+    }
+
+    .menu-btn{
+        display: none;
+    }
+
+  
+}
+
