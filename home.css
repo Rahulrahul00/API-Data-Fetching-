@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family:'Poppins', sans-serif;
     
+    
 }
 a{
     text-decoration: none;
@@ -208,6 +209,55 @@ ul{
     transition: all 0.5s ease;
    
 }
+
+
+/* 2nd Section why shop with us */
+
+#category-main{
+    margin: 3rem 0;
+}
+
+.main-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    background-color: #f7444e;
+    width: 4rem;
+    height: 0.2rem;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    text-decoration: none;
+   
+}
+.items a{
+    text-decoration: none;
+}
+
+.trending-products{
+    background-color: #fbcbde;
+    width: 100px;
+    height: 100px;
+    margin: 1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18%;
+}
+.trending-products h5{
+    font-size: 0.8rem;
+    margin: 2rem 0;
+    font-weight: 800;
+    color: #080807;
+}
+
+
 
 /* Make responsive for Navbar section  */
 .menu-btn,
