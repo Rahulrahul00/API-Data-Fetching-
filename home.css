@@ -239,6 +239,14 @@ ul{
 .items a{
     text-decoration: none;
 }
+.items i{
+    font-size: 1.5rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding-right: 0.9rem;
+   
+    
+}
 
 .trending-products{
     background-color: #fbcbde;
@@ -249,10 +257,30 @@ ul{
     align-items: center;
     justify-content: center;
     border-radius: 18%;
+    transition: transform 0.4s;
+    padding: 2rem 0 1rem 0.5rem;
+    
 }
+.trending-products .fa-cart-shopping{
+   display: block;
+   color: #2f1e53;
+}
+.trending-products .fa-users{
+    display: block;
+    color: #2f1e53;
+ }
+ .trending-products .fa-gift{
+    display: block;
+    color: #2f1e53;
+ }
+.trending-products:hover{
+    transform: translateY(-0.8rem);
+    box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.2);
+}
+
 .trending-products h5{
     font-size: 0.8rem;
-    margin: 2rem 0;
+    padding-top: 0.8rem;
     font-weight: 800;
     color: #080807;
 }
@@ -436,6 +464,35 @@ ul{
         height: 30px;
     }
     
+
+}
+
+/* Responsive why shop with us section */
+@media (max-width : 321px){
+
+    .trending-products {
+        background-color: #fbcbde;
+        width: 70px;
+        height: 80px;
+       
+    }
+    .trending-products h5{
+        font-size: 0.5rem;
+        padding-top: 0.8rem;
+        font-weight: 800;
+        color: #080807;
+    }
+    .items i{
+        font-size: 1rem;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        padding-right: 0.9rem;
+       
+        
+    }
+    .main-heading h1{
+       font-size: 1.5rem;
+    }
 
 }
 
