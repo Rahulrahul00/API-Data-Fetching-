@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+}
+header nav{
+    background-color: rgb(244, 198, 60);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem;
+}
+form .searchBox {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    font-size: .9rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+form .searchBtn{
+    width: 5rem;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 2px solid #ffffff;
+    background-color:#ffc423;
+    font-size: .9rem;
+    color: #080808;
+    cursor: pointer;
+    font-weight: 600;
+    
+}

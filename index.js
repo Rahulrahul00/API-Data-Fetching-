@@ -28,10 +28,7 @@ async function getData() {
 
 
     records.users.forEach(item =>{
-
-
-          item.image = newImages[imageIndex];
-
+      item.image = newImages[imageIndex];
 
           imageIndex++;
 
@@ -39,8 +36,7 @@ async function getData() {
             imageIndex = 0;
           }
         
-
-        console.log(item);
+// console.log(item);
         tabDetails += `<tr>
                    <td>${item.firstName}</td>
                    <td>${item.lastName}</td>
@@ -52,21 +48,12 @@ async function getData() {
                 </tr>`
 
     });
-    
-
-    
-
-   document.getElementById("tBody").innerHTML = tabDetails;
-
-
-    // console.log(data)
+    document.getElementById("tBody").innerHTML = tabDetails;
+// console.log(data)
     
 }
 
-
-
-
-    function eyeView(item){
+function eyeView(item){
 
       let displayDiv = document.getElementById("displayDiv");
       let mainContent = document.getElementById("mainContent"); // Select the content to blur
@@ -91,24 +78,15 @@ async function getData() {
                         <h5 class="mail">Email : ${item.email}</h5>
                         <h5 class="bloodGroup">bloodGroup : ${item.bloodGroup}</h5>
                         <button class="closeBtn" onclick="closePopup()">Close</button>
-
-                        
-                        
-
-          `;
+                        `;
              
-          
-            displayDiv.appendChild(employeDiv);    
+          displayDiv.appendChild(employeDiv);    
             
-            
-            setTimeout(() => {
+             setTimeout(() => {
               employeDiv.classList.add('open-popup'); // Add 'open-popup' class after a tiny delay
               mainContent.classList.add('blurred'); // Add the blur effect to the main content
             }, 10);
-          
-            
-
-        // alert(`User:${item.firstName} ${item.lastName} profile : ${item.image} Age : ${item.age}`)
+          // alert(`User:${item.firstName} ${item.lastName} profile : ${item.image} Age : ${item.age}`)
     }
 
 

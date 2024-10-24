@@ -106,9 +106,17 @@ ul{
 
 
 }
+
+.menu li a:hover{
+ border-bottom: 2px solid #fb787c;
+ border-top: 2px solid #fdc1c4;
+ border-left: 2px solid #fdc1c4;
+ border-right: 2px solid #fdc1c4;
+}
 .menu li a:hover,
 .menu li .active{
     color:#f7444e;
+    
 }
 .right-nav{
     color: #4b4b4b;
