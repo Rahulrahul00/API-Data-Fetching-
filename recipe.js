@@ -8,7 +8,22 @@ let recipeContainer = document.querySelector('.recipe-container');
 const fetchRecipes = async (query)=>{
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const response = await data.json();
-    console.log(response);
+
+    // Loop the recipes
+    response.meals.forEach(meal =>{
+       
+        // Create a Div Dynamically
+        const recipeDiv = document.createElement('div');
+              recipeDiv.classList.add('recipe');
+              recipeDiv.innerHTML = `
+                    <img src="${meal.strMealThumb}">
+
+              `  
+
+              recipeContainer.appendChild(recipeDiv);
+        console.log(meal);
+    });
+    // console.log(response.meals[0]);
 
 } 
 
@@ -18,5 +33,5 @@ searchBtn.addEventListener('click', (e) =>{
     const searchInput = searchBox.value.trim();
     fetchRecipes(searchInput);
 
-    console.log("Button Clicked");
+    // console.log("Button Clicked");
 })
