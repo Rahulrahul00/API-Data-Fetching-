@@ -57,10 +57,32 @@ form input{
     margin-right:10px ;
 }
 
+
+/* Main section */
 .recipe-container{
     color: #ff9204;
     text-align: center;
-    padding: 1rem;
+    /* padding: 1rem; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-gap: 2.5rem;
+    width: 80%;
+    margin: 0.625rem auto;
+    /* padding: 1.25rem; */
+    border-radius: 1rem;
+    place-items: center;
+}
+
+.recipe{
+    background-color: #f9c132;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    box-shadow: 0 5px 10px rgba(78,73,73,0.1), -5px -5px 10px rgba(34,34,34,0.5);
+    cursor: pointer;
+    max-width: 21rem;
 }
 
 /* Responsive Section */

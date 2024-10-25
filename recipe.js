@@ -6,9 +6,13 @@ let recipeContainer = document.querySelector('.recipe-container');
 // Open fetching api function
 
 const fetchRecipes = async (query)=>{
+
+    recipeContainer.innerHTML ="<h1>Fetching Recipes...</h1>";
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const response = await data.json();
 
+
+    recipeContainer.innerHTML ="";
     // Loop the recipes
     response.meals.forEach(meal =>{
        
@@ -17,6 +21,10 @@ const fetchRecipes = async (query)=>{
               recipeDiv.classList.add('recipe');
               recipeDiv.innerHTML = `
                     <img src="${meal.strMealThumb}">
+                    <h3>${meal.strMeal}</h3>
+                    <p>${meal.strArea}</P>
+                    <p>${meal.strCategory}</P>
+
 
               `  
 
