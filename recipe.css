@@ -41,6 +41,11 @@ form .searchBtn{
     color: #080808;
     cursor: pointer;
     font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+    
+}
+form .searchBtn:hover{
+    background-color: #f7d44b;
     
 }
 header nav  form{
@@ -52,6 +57,13 @@ form input{
     margin-right:10px ;
 }
 
+.recipe-container{
+    color: #ff9204;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Section */
 @media (max-width:600px) {
     header nav{
        
@@ -62,6 +74,16 @@ form input{
         width: 80%;
         margin-top: 20px;
         }
+    
+        .recipe-container{
+            color: #ff9204;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem;
+        }    
+        
+        
+
 
     
 }
