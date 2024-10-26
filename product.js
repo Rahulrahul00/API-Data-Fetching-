@@ -20,7 +20,7 @@ async function productData() {
 
 
         items.forEach(item =>{
-
+            
             let description = item.description;
             let title = item.title;
             let price = item.price;
