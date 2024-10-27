@@ -119,6 +119,22 @@ form input{
     transition: all 0.2s ease-in-out;
 }
 
+/* Recipi Details */
+
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #281717;
+    -webkit-transform: translate(-50%, -50%);
+    border-radius: 0.3rem;
+    width: 40%;
+    height: 60%;
+    font-size: 1.25rem;
+}
+
 /* Responsive Section */
 @media (max-width:600px) {
     header nav{

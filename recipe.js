@@ -1,7 +1,8 @@
 let searchBox = document.querySelector('.searchBox');
 let searchBtn = document.querySelector('.searchBtn');
 let recipeContainer = document.querySelector('.recipe-container');
-
+let recipeDetailsContent = document.querySelector('.recipe-details-content');
+let recipeCloseBtn = document.querySelector('.recipe-close-btn');
 
 // Open fetching api function
 
@@ -28,14 +29,27 @@ const fetchRecipes = async (query)=>{
                     `  
         const button = document.createElement('button');
               button.textContent="View Recipe";
-              recipeDiv.appendChild(button);            
+              recipeDiv.appendChild(button);       
+              
+ // adding EventLister to recipe button
+    button.addEventListener('click', () =>{
+        openRecipePopup(meal)
+    });
+
+
 
               recipeContainer.appendChild(recipeDiv);
         console.log(meal);
     });
     // console.log(response.meals[0]);
-
 } 
+
+const openRecipePopup = (meal) =>{
+    recipeDetailsContent.innerHTML = `
+     <h2>${meal.strMeal}</h2>
+    `
+    recipeDetailsContent.parentElement.style.display = "block";
+}
 
 searchBtn.addEventListener('click', (e) =>{
     e.preventDefault();
