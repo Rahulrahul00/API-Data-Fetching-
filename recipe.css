@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 body{
     background-color: rgb(255, 255, 255);
@@ -83,6 +83,10 @@ form input{
     box-shadow: 0 5px 10px rgba(78,73,73,0.1), -5px -5px 10px rgba(34,34,34,0.5);
     cursor: pointer;
     max-width: 21rem;
+    transition: transform 0.3s ease-in-out;
+}
+.recipe:hover{
+    transform: scale(1.03);
 }
 
 .recipe img{
@@ -111,6 +115,7 @@ form input{
     border-radius: 0.3rem;
     transition: all 0.2s ease-in-out;
     font-size: 0.8rem;
+    cursor: pointer;
 
 }
 .recipe button:hover{
@@ -132,11 +137,73 @@ form input{
     border-radius: 0.3rem;
     width: 40%;
     height: 60%;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    
     color: #000000;
     transition: all 0.5s ease-in-out ;
     overflow-y: scroll;
 
+}
+
+/* Adding Scroll bar recipe details  */
+
+.recipe-details::-webkit-scrollbar{
+    width: 0.5rem;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+    background-color: #ff9204;
+    border-radius: 1rem;
+    --webkit-border-radius:16px;
+
+}
+.recipe-details-content{
+    padding: 2.5rem;
+    
+}
+
+/* Popup inside content styling */
+
+.recipeName{
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration:underline;
+  margin-bottom: 0.625rem;
+  color: #a05903;
+}
+.ingredientList li{
+    margin-top: 0.625rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+.recipeInstructions p{
+    line-height: 1.8rem;
+    white-space: pre-line;
+}
+
+.recipe-close-btn{
+    border: 1px solid #ff9204;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #ff9204;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+/* browser Scroll Bar */
+
+body::-webkit-scrollbar{
+    width: 0.7rem;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #f7d44b;
+}
+body::-webkit-scrollbar-track{
+    background-color: #ffffff;
 }
 
 /* Responsive Section */
