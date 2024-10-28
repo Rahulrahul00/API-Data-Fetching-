@@ -9,6 +9,8 @@ let recipeCloseBtn = document.querySelector('.recipe-close-btn');
 const fetchRecipes = async (query)=>{
 
     recipeContainer.innerHTML ="<h1>Fetching Recipes...</h1>";
+    try {
+        
     const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
     const response = await data.json();
 
@@ -42,7 +44,13 @@ const fetchRecipes = async (query)=>{
         console.log(meal);
     });
     // console.log(response.meals[0]);
+
+} catch (error) {
+    recipeContainer.innerHTML ="<h1> Error in Fetching Recipes...</h1>";
+}
 } 
+
+
 
 //Funtion to fetch ingredients and  measurements
 
@@ -83,12 +91,18 @@ recipeCloseBtn.addEventListener('click', () =>{
     recipeDetailsContent.parentElement.style.display = "none";
 });
 
-
+// search input box and button
 searchBtn.addEventListener('click', (e) =>{
     e.preventDefault();
 
     const searchInput = searchBox.value.trim();
+    
+
+    if(!searchInput){
+        recipeContainer.innerHTML = `<h2>Type the meals in the search box...</h2>`;
+        return;
+    }
     fetchRecipes(searchInput);
 
     // console.log("Button Clicked");
-})
+});
