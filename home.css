@@ -294,12 +294,86 @@ ul{
 }
 
 
+/* body scroll bar  */
+
+body::-webkit-scrollbar{
+    width: 0.7rem;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #f69297;
+}
+body::-webkit-scrollbar-track{
+    background-color: #ffffff;
+}
+
+
 
 /* Make responsive for Navbar section  */
 .menu-btn,
 .menu-icon{
     display: none;
 }
+
+
+/* On sale section page 2 */
+
+.sale-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.sale-card{
+    position: relative;
+    overflow: hidden;
+}
+.sale-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #3d3737;
+    text-align: center;
+}
+.sales-title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sales-title span{
+    font-size: 2.5rem;
+}
+
+.sales-subtitle{
+    font-size: 1rem;
+}
+.btn-sale{
+    margin-top: 2rem;
+    color: #ffff;
+    background-color: #080807;
+}
+
+.sale-card::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top:-100%;
+    left:0;
+    background-color: #080807;
+    transition: 0.5s;
+
+}
+
+.sale-card:hover .btn-sale{
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+
+
+
 
 @media(max-width:1000px){
     .navigation{
