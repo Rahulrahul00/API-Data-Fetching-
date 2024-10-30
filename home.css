@@ -13,6 +13,11 @@ a{
 }
 ul{
     list-style: none;
+
+}
+
+ol, ul {
+    padding-left: 0 !important;
 }
 
 :root{
@@ -415,8 +420,105 @@ body::-webkit-scrollbar-track{
  }
 
 
+ 
+/* Footer star */
+
+footer{
+    width: 100%;
+    background-color: #f9f3f3f8;
+}
+.footer-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0px auto;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-company-name{
+    max-width: 330px;
+
+}
+.footer-company-name a{
+   height: 70px;
+   display: flex;
+}
+.footer-company-name span{
+    font-size: 3rem;
+    color: #f7444e;
+}
+.footer-company-name h1{
+    font-size: 1.4rem;
+    color: #080807;
+}
+.footer-company-name p{
+    color: #585858;
+    margin: 5px 0px;
+    font-size: 0.9rem;
+    
+}
+.footer-social{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-social a{
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #bdb9b9;
+    color: #333333;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: #c6c5c5;
+}
+.footer-social a:hover{
+    background-color: #fc989d;
+    transition: all 0.3s ease;
+}
+
+.footer-link-box strong{
+    font-size: 1.2rem;
+    color: #1d1d1d;
+    font-weight: 500;
+}
+.footer-link-box ul{
+    margin-top: 5px;
+}
+.footer-link-box ul li a{
+    color: #585858;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    
+    transition: all ease 0.3s;
+}
+.footer-link-box ul li a:hover{
+    color: #f7444e;
+}
+.webName2{
+    color: #f7444e;
+    font-size: 1.2rem;
+}
+.bottomDiv{
+    width: 100%;
+    height: 8vh;
+    background-color: #e6e1e1;
+       
+}
+.paymentMode{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
 
+/* Footer End */
 
 
 
@@ -429,6 +531,11 @@ body::-webkit-scrollbar-track{
         height: 65px;
         padding: 35px 15px;
         position: relative;
+    }
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:40px;
     }
     .header-fix .navigation{
         padding: 35px 15px;
@@ -515,6 +622,31 @@ body::-webkit-scrollbar-track{
     .menu-btn{
         display: none;
     }
+
+    .product-grid-half{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 200px;
+        max-height: 100%;
+    }
+
+
+@media(max-width:800px){
+     .product-grid-half .product-grid-box .product-grid-text{
+        max-width: 220px;
+     }
+}
+
+@media(max-width:376px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:360px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
 
   
 }

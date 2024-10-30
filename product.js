@@ -1,5 +1,9 @@
 
-let products = document.querySelector('.products')
+
+let products = document.querySelector('.products');
+let categorySelect = document.getElementById('category-select');
+
+
 
 async function productData() {
 
@@ -48,6 +52,62 @@ async function productData() {
 
     }
 
+
+// Filter by category  
+
+async function fetchCategory(){
+
+    try{
+        const response = await fetch('https://dummyjson.com/products/categories');
+        if(!response) throw new Error('Failed to fetch categories');
+
+        const categories = await response.json();
+        categoryDropDown(categories);
+       
+    }catch (error){
+        console.error(error);
+        categorySelect.innerHTML = `<option value="">Failed to load category</option>`;
+
+
+    }
+}
+
+let categoryDropDown =(categories) =>{
+    categorySelect.innerHTML = `<option value="">ALL</option>`; //reset the dropdown
+    categories.forEach(category =>{
+       categorySelect.innerHTML += `<option value="${category.slug}">${category.name}</option>`
+    })
+
+
+}
+
+// filtered product by category
+
+categorySelect.addEventListener('change', async(event)=>{
+
+    const category = event.target.value;
+
+    if(category){
+        try{
+            const response = await fetch (`https://dummyjson.com/products/category/${category}`);
+            const data = await response.json();
+            searchItems(data.products); 
+        } catch(error){
+            console.error(error);
+            products.innerHTML = `<p>Failed to load product. Please try again later.</p>`;
+        }
+    }else{
+        productData();
+        
+    }
+
+});
+
+
+
+
+
+
    
 
 // search products when user click the search button
@@ -77,6 +137,7 @@ document.getElementById('searchBtn').addEventListener('click', async ()=>{
 });
 
 productData();
+fetchCategory();
 
 
 
