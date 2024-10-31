@@ -75,7 +75,7 @@ async function fetchCategory(){
 let categoryDropDown =(categories) =>{
     categorySelect.innerHTML = `<option value="">ALL</option>`; //reset the dropdown
     categories.forEach(category =>{
-       categorySelect.innerHTML += `<option value="${category.slug}">${category.name}</option>`
+       categorySelect.innerHTML += `<option  class="optCat" value="${category.slug}">${category.name}</option>`
     })
 
 
@@ -104,11 +104,6 @@ categorySelect.addEventListener('change', async(event)=>{
 });
 
 
-
-
-
-
-   
 
 // search products when user click the search button
 

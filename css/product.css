@@ -172,6 +172,21 @@ body{
     font-weight: 500;
 }
 
+/* scroll bar */
+#category-select::-webkit-scrollbar{
+    width: 0.5rem;
+}
+#category-select::-webkit-scrollbar-thumb{
+    background-color: #730af3;
+    border-radius: 1rem;
+    --webkit-border-radius:18px;
+}
+.optCat{
+    background-color: #cea8f9;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
 
 /* Resposive  */
 
