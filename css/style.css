@@ -690,6 +690,77 @@ footer{
 }
 
 /* Make @376px responsive for home page */
+
+@media(max-width:720px){
+    .product-grid-box3 h3{
+        font-size: 1.8rem;
+        margin: 1rem 0 0 12rem;
+    }
+   
+    .product-grid-box1 h3{
+        font-size: 2rem;
+        margin: 1rem 0 0 12rem;
+    }
+    .product-grid-box1 p{
+        font-size: 1.8rem;
+        margin: 1rem 0 0 12rem;
+    }
+    .product-grid-box1 p{
+        font-size: 1.3rem;
+        margin: 1rem 0 0 12rem;
+    }
+    .product-grid-box3 p {
+        font-size: 1rem;
+        margin: 1rem 0 0 12rem;
+    } 
+
+    .product-grid-text h3 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin-left: 8rem;
+        white-space: nowrap;
+    }
+    .product-grid-text p {
+        font-size: 1rem;
+        
+        margin-left: 8rem;
+        white-space: nowrap;
+    }
+    .product-grid-text a {
+        color: #ffffff;
+        margin-left: 10rem;
+        white-space: nowrap;
+    }
+    .product-grid-text a:hover {
+        border-bottom: 2px solid #ffffff;
+        transition: 0.2s ease ease-out;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width:426px){
+
+    .product-grid-box3 h3{
+        font-size: 1.2rem;
+        
+    }
+    .product-grid-box2 h3{
+        font-size: 1.5rem;
+        
+    }
+    .product-grid-box1 h3{
+        font-size: 1.2rem;
+        
+    }
+    .product-grid-text p{
+        font-size: 0.8rem;
+     
+    }
+
+
+
+}
+
 @media(max-width:376px){
 
     .main-banner-text h1{
