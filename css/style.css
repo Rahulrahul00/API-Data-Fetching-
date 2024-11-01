@@ -686,6 +686,21 @@ footer{
         margin: 2rem 0;
 
     }
+    .footer-link-box ul li {
+        color: #585858;
+        font-size: 0.8rem;
+        margin: 0 0.1rem;
+        white-space: nowrap;
+        transition: all ease 0.3s;
+    }
+    .list-unstyled li{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2rem;
+        margin-right: 3rem;
+
+
+    }
 
 }
 
@@ -838,6 +853,14 @@ footer{
     }
     .main-heading h1{
        font-size: 1.5rem;
+    }
+    .list-unstyled li{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:2rem;
+        margin-right: 3rem;
+
+
     }
 
 }
