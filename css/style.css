@@ -690,7 +690,7 @@ footer{
         color: #585858;
         font-size: 0.8rem;
         margin: 0 0.1rem;
-        white-space: nowrap;
+        white-space: wrap;
         transition: all ease 0.3s;
     }
     
@@ -795,7 +795,9 @@ footer{
     .footer-link-box ul li{
        white-space: wrap;
     }
-   
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media(max-width:376px){
