@@ -792,6 +792,9 @@ footer{
     .main-heading h1{
        font-size: 1.5rem;
     }
+    .footer-link-box ul li{
+       white-space: wrap;
+    }
    
 }
 
