@@ -72,6 +72,7 @@ body{
 .product-description,
 .product-price-container{
     padding: 0.1rem 0 0;
+    cursor: pointer;
 
 }
 .product-price-container{

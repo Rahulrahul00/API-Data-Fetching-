@@ -37,7 +37,9 @@ async function productData() {
                  <div class="product-content">
                      <h2 class="product-title">${title.length >10 ? title.substring(0, 10).concat('...') : title}</h2>
                      <h4 class="product-category">${item.category}</h4>
-                     <p class="product-description">${description.length > 40 ? description.substring(0, 40).concat('...more') : description }</p>
+                     <p class="product-description">${description.length > 40 ? description.substring(0, 40).concat('...') : description }
+                        <span class="toggle-description" data-full-text="${description}">more</span>
+                     </p>
                      <div class="product-price-container">
                          <h3 class="product-price">Rs ${price}</h3>
                          <a href="#!" data-productId="${item.id}" class="add-to-cart">Add To Cart</a>
@@ -47,6 +49,21 @@ async function productData() {
                    
                  </div>  
                `;
+
+               products.querySelectorAll('.toggle-description').forEach(toggle =>{
+                    toggle.addEventListener('click', function(){
+                        const  fullText = this.getAttribute('data-full-text');
+                        const isExpanded = this.classList.toggle('expanded');
+
+                        if (isExpanded) {
+                            this.previousSibling.textContent = fullText;
+                            this.textContent = 'less';
+                          } else {
+                            this.previousSibling.textContent = fullText.substring(0, 40) + '...';
+                            this.textContent = 'more';
+                          }
+                    })
+               });
          });
 
 
