@@ -57,10 +57,12 @@ async function productData() {
 
                         if (isExpanded) {
                             this.previousSibling.textContent = fullText;
-                            this.textContent = 'less';
+                            this.textContent = '...less';
+                            this.style.color = "#a963fe";
                           } else {
                             this.previousSibling.textContent = fullText.substring(0, 40) + '...';
                             this.textContent = 'more';
+                            this.style.color = "#a963fe";
                           }
                     })
                });
