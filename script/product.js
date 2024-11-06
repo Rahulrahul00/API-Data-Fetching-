@@ -92,7 +92,7 @@ async function fetchCategory(){
 }
 
 let categoryDropDown =(categories) =>{
-    categorySelect.innerHTML = `<option value="">ALL</option>`; //reset the dropdown
+    categorySelect.innerHTML = `<option value="">All</option>`; //reset the dropdown
     categories.forEach(category =>{
        categorySelect.innerHTML += `<option  class="optCat" value="${category.slug}">${category.name}</option>`
     })

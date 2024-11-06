@@ -183,9 +183,32 @@ body{
     --webkit-border-radius:18px;
 }
 .optCat{
-    background-color: #cea8f9;
+    background-color: #ffffff;
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+.filter label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.filter select{
+    outline: none;
+    border: none;
+    background-color: #e4ceff;
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    text-align: start;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.filter select:hover{
+    transition: 0.5s ease;
+    background-color: #bba5f6;
 }
 
 
