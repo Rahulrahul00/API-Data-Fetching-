@@ -160,6 +160,12 @@ body{
     border-radius: 0.5rem;
     cursor: pointer;
 }
+.search i{
+   position: relative;
+   right: 7rem;
+   top:3rem;
+
+}
 
 
 /* Filter option by category waise */
@@ -203,7 +209,7 @@ body{
     transition: 0.5s ease;
     text-align: start;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .filter select:hover{
